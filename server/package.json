@@ -1,0 +1,19 @@
+{
+  "name": "chicle_url_shortener_backend",
+  "version": "1.0.0",
+  "description": "Backend for the Chicle url shortener",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eschiclers/url_shortener.git"
+  },
+  "author": "Chicle <hola@chicle.dev>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eschiclers/url_shortener/issues"
+  },
+  "homepage": "https://github.com/Eschiclers/url_shortener#readme"
+}
