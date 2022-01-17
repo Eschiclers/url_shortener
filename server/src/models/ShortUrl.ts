@@ -1,4 +1,6 @@
 import { Schema, model, Document } from 'mongoose';
+import { nanoid } from 'nanoid';
+import Config from '../config';
 
 interface IShortUrl extends Document {
   short_id: string;
@@ -12,7 +14,7 @@ interface IShortUrl extends Document {
 const ShortUrlSchema: Schema = new Schema({
   short_id: {
     type: String,
-    required: true,
+    default: nanoid(Number(Config.ID_LENGTH)),
     unique: true,
   },
   target: {
