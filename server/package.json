@@ -4,6 +4,7 @@
   "description": "Backend for the Chicle url shortener",
   "main": "dist/index.js",
   "scripts": {
+    "web": "node dist/index.js",
     "start": "run-p -l ts-check start:dev",
     "start:dev": "nodemon --exec babel-node --extensions \".ts\" src/index.ts",
     "dev": "nodemon --exec babel-node --extensions \".ts\" src/index.ts",
