@@ -2,8 +2,16 @@
   "name": "chicle_url_shortener_backend",
   "version": "1.0.0",
   "description": "Backend for the Chicle url shortener",
-  "main": "app.js",
+  "main": "dist/index.js",
   "scripts": {
+    "start": "run-p -l ts-check start:dev",
+    "start:dev": "nodemon --exec babel-node --extensions \".ts\" src/index.ts",
+    "dev": "nodemon --exec babel-node --extensions \".ts\" src/index.ts",
+    "build:prod": "npm run clean && babel src -d dist --ignore=\"./src/**/*.spec.ts\" --extensions \".ts\"",
+    "build": "run-p -l ts-check build:prod",
+    "clean": "rimraf dist",
+    "ts-check": "tsc --noEmit",
+    "ts-check:watch": "npm run ts-check -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +23,20 @@
   "bugs": {
     "url": "https://github.com/Eschiclers/url_shortener/issues"
   },
-  "homepage": "https://github.com/Eschiclers/url_shortener#readme"
+  "homepage": "https://github.com/Eschiclers/url_shortener#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/node": "^17.0.9",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
