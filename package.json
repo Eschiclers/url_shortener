@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "mongoose": "^6.1.6",
-    "nanoid": "^3.2.0"
-  },
-  "devDependencies": {
-    "@types/mongoose": "^5.11.97"
-  }
-}
