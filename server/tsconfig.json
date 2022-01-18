@@ -5,7 +5,7 @@
     "moduleResolution": "node",
     "declaration": false,
     "noImplicitAny": false,
-    "sourceMap": true,
+    "sourceMap": false,
     "noLib": false,
     "allowJs": true,
     "suppressImplicitAnyIndexErrors": true,

@@ -8,7 +8,7 @@
     "start": "run-p -l ts-check start:dev",
     "start:dev": "nodemon --exec babel-node --extensions \".ts\" src/index.ts",
     "dev": "nodemon --exec babel-node --extensions \".ts\" src/index.ts",
-    "build:prod": "npm run clean && babel src -d dist --ignore=\"./src/**/*.spec.ts\" --extensions \".ts\"",
+    "build:prod": "npm run clean && tsc",
     "build": "run-p -l ts-check build:prod",
     "clean": "rimraf dist",
     "ts-check": "tsc --noEmit",
