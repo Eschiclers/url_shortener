@@ -1,6 +1,6 @@
 import { Schema, model, Document } from 'mongoose';
-import { nanoid } from 'nanoid';
-import Config from '../config';
+
+
 
 interface IShortUrl extends Document {
   short_id: string;
@@ -8,13 +8,14 @@ interface IShortUrl extends Document {
   owner: string;
   created_at: Date;
   password: string;
+  is_protected: boolean;
   clicks: number;
 }
 
 const ShortUrlSchema: Schema = new Schema({
   short_id: {
     type: String,
-    default: nanoid(Number(Config.ID_LENGTH)),
+    required: true,
     unique: true,
   },
   target: {
@@ -34,6 +35,10 @@ const ShortUrlSchema: Schema = new Schema({
     default: () => {
       return (Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)).toUpperCase();
     }
+  },
+  is_protected: {
+    type: Boolean,
+    default: false,
   },
   clicks: {
     type: Number,
