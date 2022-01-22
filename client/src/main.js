@@ -2,14 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
+import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 
-// Import all ant design components
-import {
-  Button,
-  Layout,
-} from 'ant-design-vue';
-Vue.use(Button, Layout);
+Vue.use(Antd);
 
 Vue.config.productionTip = false
 

@@ -1,8 +1,16 @@
 <template>
   <div id="app">
-    <Navbar />
-    <router-view />
-    <Footer />
+    <a-layout>
+      <a-layout-header>
+        <Navbar />
+      </a-layout-header>
+      <a-layout-content>
+        <router-view />
+      </a-layout-content>
+      <a-layout-footer>
+        <Footer />
+      </a-layout-footer>
+    </a-layout>
   </div>
 </template>
 
@@ -14,6 +22,9 @@ export default {
   components: {
     Navbar,
     Footer,
+  },
+  data() {
+    return {};
   },
 };
 </script>
