@@ -1,13 +1,16 @@
 <template>
-  <div class="home"></div>
+  <div id="short_url"></div>
 </template>
 
 <script>
 export default {
-  name: "Home",
+  components: {},
   data() {
     return {};
   },
+  mounted() {},
   methods: {},
 };
 </script>
+
+<style lang="scss" scoped></style>

@@ -1,13 +1,14 @@
 <template>
-  <div class="home"></div>
+  <div id="create"></div>
 </template>
 
 <script>
 export default {
-  name: "Home",
+  components: {},
   data() {
     return {};
   },
   methods: {},
+  mounted() {},
 };
 </script>
